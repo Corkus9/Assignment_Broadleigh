@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php require __DIR__ . "/inc/header.php"; ?>
      
    <h1>Products!</h1>
