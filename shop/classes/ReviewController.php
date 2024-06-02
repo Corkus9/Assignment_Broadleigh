@@ -29,9 +29,9 @@ class ReviewController {
 
     public function get_review_by_product_id(int $id)
     {
-        $sql = "SELECT * FROM review WHERE id = :id";
+        $sql = "SELECT * FROM product WHERE id = $id";
         $args = ['id' => $id];
-        return $this->db->runSQL($sql, $args)->fetch();
+        return $this->db->runSQL($sql)->fetchAll();
     }
 
     public function get_all_reviews()

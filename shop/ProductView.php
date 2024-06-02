@@ -20,17 +20,20 @@
    
 <?php
  require_once './inc/functions.php';
-  if($_SERVER['REQUEST_METHOD']=='POST'){
+
+ if($_SERVER['REQUEST_METHOD']=='POST'){
     $ReviewText = $_POST['Review_Text'];
-    $ReviewRating = $_POST['Rating'];
+    $ReviewRating = (int)$_POST['Rating'];
     var_dump($_POST);
-    $args= ['ProductID' => $_GET['Product'],'CustomerID ' => $_SESSION['user']['id'], 'ReviewText' => $ReviewText, 'ReviewRating' => $ReviewRating];
+    $args= ['product_id' => (int)$_GET['Product'],'user_id' => $_SESSION['user']['id'], 'review_text' => $ReviewText, 'review_rating' => $ReviewRating];
     var_dump($args);
-    $controllers ->reviews()->create_review($args);
+    echo $_SESSION['user']['id'];
+    $controllers ->products()->create_review($args);
 
   }
  if (isset($_GET['Product'])){
   $product = $controllers->products()->get_product_by_id((int)$_GET['Product']);
+  $reviews = $controllers->products()->get_review_by_product_id((int)$_GET['Product']);
 
  } else {
   redirect('products');
@@ -78,20 +81,25 @@
             </div>
         </div>
         </form>
-        <div class="row w-100 d-flex">
+        <?php foreach($reviews as $review){
+            echo '<div class="row w-100 d-flex">
             <div class="col-2 border border-dark d-flex justify-content-center">
-                <h3 class="align-self-center">STARS</h3>
+                <h3 class="align-self-center">'. $review['review_rating'] .'</h3>
             </div>
-            <div class="col-8 border border-dark align-self-center">
-                Review Text Review Text Review Text Review Text Review Text Review Text Review Text Review Text Review Text Review Text Review Text
+            <div class="col-8 h-100 border border-dark align-self-center">
+            '. $review['review_text'].'
             </div>
             <div class="col-2 border border-dark d-flex justify-content-center">
                 <text class="text-muted align-self-center">
-                    DATE
+                    ' . $review['modifiedOn'] . '
                 </text>
             </div>
-        </div>
-    </div>    
+        </div>';
+        }
+
+
+        
+     ?> 
    
 
 

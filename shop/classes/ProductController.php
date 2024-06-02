@@ -27,11 +27,38 @@ class ProductController {
         }
     }
 
+
+    public function create_review(array $review) 
+    {
+        try {
+
+            $sql = "INSERT INTO review(product_id, user_id, review_text, review_rating) 
+                    VALUES (:product_id, :user_id, :review_text, :review_rating)"; 
+
+            return $this->db->runSQL($sql, $review)->fetch();
+
+        } catch (PDOException $e) {
+
+            if ($e->getCode() == 23000) { //Could be 1062
+                return false;
+            }
+            throw $e;
+        }
+    }
+
     public function get_product_by_id(int $id)
     {
         $sql = "SELECT * FROM products WHERE id = :id";
         $args = ['id' => $id];
         return $this->db->runSQL($sql, $args)->fetch();
+    }
+
+
+    public function get_review_by_product_id(int $id)
+    {
+        $sql = "SELECT * FROM review WHERE product_id = :id";
+        $args = ['id' => $id];
+        return $this->db->runSQL($sql, $args)->fetchAll();
     }
 
     public function get_all_products()
