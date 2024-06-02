@@ -5,6 +5,7 @@ class Controllers {
     protected $db = null;
     protected $members = null;
     protected $products = null;
+    protected $reviews = null;
 
     public function __construct()
     {
@@ -28,7 +29,7 @@ class Controllers {
         }
         catch (PDOException $e) {
             throw new PDOException($e -> getMessage(), $e -> getCode());
-            echo $e;
+            
         }
     }
 
