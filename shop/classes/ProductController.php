@@ -40,6 +40,13 @@ class ProductController {
         return $this->db->runSQL($sql)->fetchAll();
     }
 
+    public function get_all_products_search(string $search)
+    {
+        $sql = "SELECT * FROM products WHERE name LIKE '%$search%' OR description LIKE '%$search%'";
+        $args = ["search"=> $search];
+        return $this->db->runSQL($sql)->fetchAll();
+    }
+
     public function update_product(array $product)
     {
         $sql = "UPDATE products SET name = :name, description = :description, price = :price, iamge = :image WHERE id = :id";
