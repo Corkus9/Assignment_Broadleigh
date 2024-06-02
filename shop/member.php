@@ -12,6 +12,7 @@
 ?>
 
 <h1>Welcome <?= $_SESSION['user']['firstname'] ?? 'Member' ?>!</h1>
+<p>If you have any problems, please contact an admin.</p>
 
 <?php echo '<pre>';
 var_dump($_SESSION);
