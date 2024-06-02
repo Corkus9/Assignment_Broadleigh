@@ -24,10 +24,7 @@
  if($_SERVER['REQUEST_METHOD']=='POST'){
     $ReviewText = $_POST['Review_Text'];
     $ReviewRating = (int)$_POST['Rating'];
-    var_dump($_POST);
     $args= ['product_id' => (int)$_GET['Product'],'user_id' => $_SESSION['user']['id'], 'review_text' => $ReviewText, 'review_rating' => $ReviewRating];
-    var_dump($args);
-    echo $_SESSION['user']['id'];
     $controllers ->products()->create_review($args);
 
   }

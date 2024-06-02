@@ -69,7 +69,12 @@ class ProductController {
 
     public function get_all_reviews()
     {
-        $sql = "SELECT * FROM review left outer join products on review.product_id = products.id";
+        $sql = "SELECT review.id, review.review_text, review.review_rating, review.modifiedOn, products.name FROM review left outer join products on review.product_id = products.id";
+        return $this->db->runSQL($sql)->fetchAll();
+    }
+
+    public function get_all_user_reviews(int $id){
+        $sql = "SELECT review.id, review.review_text, review.review_rating, review.modifiedOn, products.name FROM review left outer join products on review.product_id = products.id where user_id =$id";
         return $this->db->runSQL($sql)->fetchAll();
     }
 
@@ -100,9 +105,9 @@ class ProductController {
 
     public function delete_review(int $id)
     {
-        $sql = "DELETE FROM review WHERE id = :id";
-        $args = ['id' => $id];
-        return $this->db->runSQL($sql, $args)->execute();
+        $reviewid = $id;
+        $sql = "DELETE FROM review WHERE id = $reviewid";
+        return $this->db->runSQL($sql)->execute();
     }
 
 }

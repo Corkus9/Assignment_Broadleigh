@@ -5,7 +5,6 @@ class Controllers {
     protected $db = null;
     protected $members = null;
     protected $products = null;
-    protected $reviews = null;
 
     public function __construct()
     {

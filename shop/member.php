@@ -6,7 +6,7 @@
     {
         redirect('login', ["error" => "You need to be logged in to view this page"]);
     }
-
+    $reviews =$controllers->products()->get_all_user_reviews($_SESSION['user']['id']);
     $title = 'Member Page'; 
     require __DIR__ . "/inc/header.php"; 
 ?>
@@ -14,7 +14,7 @@
 <div class="container">
             <div class="row">
                 <div class="row">
-                    <h2>Admin Details</h2>
+                    <h2>Account Details</h2>
                 </div>
                 <form action="AccountUpdate.php" method="post">
                 <div class="row d-flex justify-content-center">
@@ -64,6 +64,7 @@
                         <tbody>
                             <tr>
                             <?php foreach($reviews as $review){
+                                
                                 echo'<tr>
                                 <th scope="row">' . $review['name'].' </th>
                                 <th>'. $review['review_text'].'</th>
