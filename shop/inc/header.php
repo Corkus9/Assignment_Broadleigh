@@ -10,7 +10,7 @@
   <body class="bg-light">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <div class="container-fluid">
+  <div class="container-fluid col-md-6 col-12 mx-auto">
     <a class="navbar-brand" href="./index.php">Home</a>
     <a class="navbar-brand" href="./products.php">Products</a>
     <a class="navbar-brand" href="./member.php">Account</a>
