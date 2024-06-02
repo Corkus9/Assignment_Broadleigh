@@ -60,6 +60,17 @@ class InputProcessor {
 
     }
 
+
+    public static function processReview(string $review){
+        if (!empty($review)&& strlen($review) > 0){
+            return self::returnInput($review, true);
+        }
+            
+        
+    }
+
+
+
     private static function returnInput(string $value, bool $isValid) : array {
         return [
             'value' => $isValid ? $value : '',
