@@ -25,7 +25,7 @@
   $products =$controllers->products()->get_all_products();//Retrieve all products from the get_all_products from the ProductController and store in $products
  }
  foreach ($products as $product) {//For each product in $product
-   echo '<div class="col-12 col-md-6 col-lg-3 px-2"><div class ="card"><img src="'.$product['image'] .'"class="card-img-top img-responsive" style ="height: 300px" alt="Card image cap"><div class="card-body"><h5 class="card-title">'. $product['name'].'</h5><p class="card-text">' .$product['description'] .'</p><p class="card-text"><small class="text-muted">'.$product['price'].'</small></p><a href="#" class="btn btn-primary">Details</a></div></div></div>';
+   echo '<div class="col-12 col-md-6 col-lg-3 px-2"><div class ="card"><img src="'.$product['image'] .'"class="card-img-top img-responsive" style ="height: 300px" alt="Card image cap"><div class="card-body"><h5 class="card-title">'. $product['name'].'</h5><p class="card-text">' .$product['description'] .'</p><p class="card-text"><small class="text-muted">'.$product['price'].'</small></p><a href="ProductView.php?Product='. $product['id'] .'" class="btn btn-primary">Details</a></div></div></div>';
  }
 ?>
    </div>

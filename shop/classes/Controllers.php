@@ -47,4 +47,12 @@ class Controllers {
         }
         return $this->products;
     }
+
+    public function reviews()
+    {
+        if ($this->reviews() === null) {
+            $this->reviews = new ReviewController($this->db);
+        }
+        return $this->reviews;
+    }
 }
