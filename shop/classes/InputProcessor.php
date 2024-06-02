@@ -2,7 +2,7 @@
 
 class InputProcessor {
 
-    public static function processString(string $string, int $max = 0): array {
+    public static function processString(string $string, int $max = 10): array {
 
         if (empty($string)) {
             return self::returnInput("String is empty.", false);

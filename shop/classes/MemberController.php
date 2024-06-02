@@ -31,8 +31,13 @@ class MemberController {
 
     public function update_member(array $member)
     {
-        $sql = "UPDATE users SET firstname = :firstname, lastname = :lastname, email = :email WHERE id = :id";
-        return $this->db->runSQL($sql, $member)->execute();
+        $id= $member['id'];
+        $firstname= $member['firstname'];
+        $lastname= $member['lastname'];
+        
+
+        $sql = "UPDATE users SET firstname = '$firstname', lastname = '$lastname' WHERE id = $id";
+        return $this->db->runSQL($sql)->execute();
     }
 
     public function delete_member(int $id)

@@ -67,6 +67,12 @@ class ProductController {
         return $this->db->runSQL($sql)->fetchAll();
     }
 
+    public function get_all_reviews()
+    {
+        $sql = "SELECT * FROM review";
+        return $this->db->runSQL($sql)->fetchAll();
+    }
+
     public function get_all_products_search(string $search)
     {
         $sql = "SELECT * FROM products WHERE name LIKE '%$search%' OR description LIKE '%$search%'";
