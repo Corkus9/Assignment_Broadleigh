@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/bootstrap.css" rel="stylesheet">
+     <!-- Vendor CSS Files -->
+  <link href="css/vendor/aos/aos.css" rel="stylesheet">
+  <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="css/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="css/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet"></head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title> <?= $title ?? 'Welcome' ?> </title>
   </head>
@@ -14,6 +24,8 @@
     <a class="navbar-brand" href="./index.php">Home</a>
     <a class="navbar-brand" href="./products.php">Products</a>
     <a class="navbar-brand" href="./member.php">Account</a>
+
+    
     <?php 
      if (!isset($_SESSION['user']))
      {

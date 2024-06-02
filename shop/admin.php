@@ -19,6 +19,7 @@
 
     $members =$controllers->members()->get_all_members();
     $reviews =$controllers->products()->get_all_reviews();
+    $products =$controllers->products()->get_all_products();
 
     $title = 'Member Page'; 
     require __DIR__ . "/inc/header.php"; 
@@ -96,24 +97,60 @@
                                 <th scope="col">Review Text</th>
                                 <th scope="col">Rating</th>
                                 <th scope="col">Date</th>
-                                <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">PRODUCT NAME</th>
-                                <th>Review Text Review Text Review Text Review Text Review Text Review Text Review Text Review Text </th>
-                                <th>5</th>
-                                <th>01/01/2000</th>
-                                <th>EDIT</th>
-                                <th>DELETE</th>
+                            <?php foreach($reviews as $review){
+                                echo'<tr>
+                                <th scope="row">' . $review['name'].' </th>
+                                <th>'. $review['review_text'].'</th>
+                                <th>'. $review['review_rating'].'</th>
+                                <th>'. $review['modifiedOn'].'</th>
+                                <th><a href="deletereview.php?review='. $review['id'] .'">DELETE</a></th>
+                            </tr>';} ?>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
+        <div class="row mt-5">
+                <div class="row">
+                    <h2>Products</h2>
+                </div>
+                <div class="row">
+                    <a href="createproduct.php">Create</a>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered table-striped table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Product Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <?php foreach($products as $product){
+                                echo'<tr>
+                                <th scope="row">' . $product['name'].' </th>
+                                <th>'. $product['description'].'</th>
+                                <th>'. $product['price'].'</th>
+                                <th>'. $product['modifiedOn'].'</th>
+                                <th><a href="editproduct.php?product='. $product['id'] .'">EDIT</a></th>
+                                <th><a href="deleteproduct.php?product='. $product['id'] .'">DELETE</a></th>
+                            </tr>';} ?>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
     </body>
 </html>
 

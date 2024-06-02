@@ -57,12 +57,7 @@ class ReviewController {
         return $this->db->runSQL($sql, $review)->execute();
     }
 
-    public function delete_review(int $id)
-    {
-        $sql = "DELETE FROM review WHERE id = :id";
-        $args = ['id' => $id];
-        return $this->db->runSQL($sql, $args)->execute();
-    }
+    
 
 }
 
