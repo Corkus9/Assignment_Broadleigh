@@ -8,7 +8,7 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center my-5">
-                            <h1 class="display-5 fw-bolder text-white mb-2">Present your business in a whole new way</h1>
+                            <h1 class="display-5 fw-bolder text-white mb-2">Broadleigh Gardens</h1>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                                 <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
                                 <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
@@ -24,8 +24,8 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                        <h2 class="h4 fw-bolder">Featured title</h2>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <h2 class="h4 fw-bolder">Announcement</h2>
+                        <p>Announcement: Our latest Spring Catalogue is live, featuring snowdrops, South African plants, iris, and more. Act fast as plants are selling quickly!</p>
                         <a class="text-decoration-none" href="#!">
                             Call to action
                             <i class="bi bi-arrow-right"></i>
@@ -33,8 +33,9 @@
                     </div>
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                        <h2 class="h4 fw-bolder">Featured title</h2>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <h2 class="h4 fw-bolder">News</h2>
+                        <p>Sales from our 2023 Autumn Store have ended. We'll resume selling spring flowering bulbs like tulips, daffodils, crocus, etc., in June 2024, with deliveries continuing from Kent.
+Items from our Special Bulbs List, including miniature daffodils and dwarf bearded iris, are no longer available for sale. Interested? Leave us a message for potential availability in autumn.</p>
                         <a class="text-decoration-none" href="#!">
                             Call to action
                             <i class="bi bi-arrow-right"></i>
@@ -42,8 +43,11 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                        <h2 class="h4 fw-bolder">Featured title</h2>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <h2 class="h4 fw-bolder">Our Plans!</h2>
+                        <p>Cut off the old leaves on Hellebore orientalis – not only  do they harbour infection they make a good hiding place for mice who can  then feed on the fat flower buds. The leaves can also swamp emerging  snowdrops. 
+2. Mulch overwintering plants like agapanthus with leaves etc.
+3. Remember that even if it has rained potted bulbs will need watering once they start growing. 
+4. In periods of severe frost bring pots of agapanthus under cover for wrap well as the frost can kill the roots. </p>
                         <a class="text-decoration-none" href="#!">
                             Call to action
                             <i class="bi bi-arrow-right"></i>
@@ -57,7 +61,7 @@
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
                     <h2 class="fw-bolder">Customer testimonials</h2>
-                    <p class="lead mb-0">Our customers love working with us</p>
+                    <p class="lead mb-0">Our customers love our plants and tips!</p>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
@@ -67,8 +71,8 @@
                                 <div class="d-flex">
                                     <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
                                     <div class="ms-4">
-                                        <p class="mb-1">Thank you for putting together such a great product. We loved working with you and the whole team, and we will be recommending you to others!</p>
-                                        <div class="small text-muted">- Client Name, Location</div>
+                                        <p class="mb-1">I received my order yesterday- all beautifully packaged. The plants  look wonderful and very promising. Thank you very much for taking such care. </p>
+                                        <div class="small text-muted">- B B, March 2021</div>
                                     </div>
                                 </div>
                             </div>
@@ -79,8 +83,8 @@
                                 <div class="d-flex">
                                     <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
                                     <div class="ms-4">
-                                        <p class="mb-1">The whole team was a huge help with putting things together for our company and brand. We will be hiring them again in the near future for additional work!</p>
-                                        <div class="small text-muted">- Client Name, Location</div>
+                                        <p class="mb-1">I am writing to say how much pleasure your Tulip White triumpahator  gives me. They come up year after year and knock me out every  time…..last year I bought Muscari Bling Bling and they are the best for  size and colour.</p>
+                                        <div class="small text-muted">- C. McF, May 2015</div>
                                     </div>
                                 </div>
                             </div>
